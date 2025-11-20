@@ -120,18 +120,22 @@ Current State
 ## Infrastructure as Code
 The ARM template for this Data Lake setup is available in /infrastructure/template.json.
 ### Key Configuration
-json{
+```json
+{
   "Hierarchical Namespace": "Enabled (Data Lake Gen2)",
   "Encryption": "Microsoft-managed keys",
   "Network Access": "Public endpoint, Azure Services allowed",
   "Soft Delete": "7 days retention",
   "TLS Version": "1.2 minimum"
 }
+```
 Deploy This Template
-bashaz deployment group create \
-  --resource-group YOUR_RESOURCE_GROUP \
+```bash
+az deployment group create \
+  --resource-group <YOUR_RESOURCE_GROUP> \
   --template-file infrastructure/template.json \
-  --parameters storageAccounts_cvdatastoragetotest_name=YOUR_STORAGE_NAME
+  --parameters storageAccounts_cvdatastoragetotest_name=<YOUR_STORAGE_NAME>
+```
 ## Data Schema
 ### Bronze Layer
 
