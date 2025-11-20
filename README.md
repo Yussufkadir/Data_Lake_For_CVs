@@ -38,7 +38,6 @@ cv-data-layers/
 - Optimized for consumption
 
 
-
 ## 🛠️ Azure Infrastructure
 ### Services Used
 
@@ -72,12 +71,10 @@ Performance: Standard
 Replication: LRS
 Enabled hierarchical namespace for Data Lake Gen2
 
-
 ### Created Container
 
 Name: cv-data-layers
 Access level: Private
-
 
 ### Created Folder Structure
 
@@ -85,14 +82,11 @@ Bronze layer for raw data ingestion
 Silver layer for cleaned data
 Gold layer for production-ready datasets
 
-
 ### Uploaded Data
 
 Raw NER training data uploaded to bronze layer
 Cleaned datasets placed in silver layer
 Manual upload through Azure Portal UI
-
-
 
 ## Why Azure ❓
 After evaluating multiple cloud platforms, I chose Azure for this project because:
@@ -107,7 +101,7 @@ Current State
 
 ✅ Bronze layer: Raw NER data with quality issues ingested
 ✅ Silver layer: Data cleaning and validation completed
-🔄 Gold layer: NER annotation in progress
+✅ Gold layer: NER annotation 
 
 ## 🔜 Planned Enhancements
 
@@ -149,10 +143,9 @@ az deployment group create \
 - Standardized format
 - Removed duplicates and invalid entries
 
-### Gold Layer (Planned)
+### Gold Layer
 
 - Fully annotated NER training data
-- Quality score for each annotation
 - Ready for ML model consumption
 
 ## 🌱 Lessons Learned
@@ -200,15 +193,16 @@ azure-datalake-ner/
 ├── infrastructure/
 │   └── template.json          # ARM template for storage account
 ├── docs/
-│   ├── setup-guide.md         # Detailed setup instructions
+│   ├── setup_guide.md         # Detailed setup instructions
 │   └── architecture.png       # Architecture diagram (TBD)
 └── scripts/                   # Future: automation scripts
-    └── data-processing/
+    ├── data_preparation
+    └── downloads
 ```
 ## 🔑 License
 MIT License
 ## 📇 Contact
-Yussufkadir Syurmen
+Yussufkadir Syurmen e-mail: syurmen2@gmail.com
 
 >[!NOTE]
 >This is a learning project demonstrating data lake concepts and the medallion architecture pattern. The manual setup process documented here serves as a foundation for understanding before implementing full automation.
